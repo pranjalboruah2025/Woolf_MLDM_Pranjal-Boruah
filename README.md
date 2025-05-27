@@ -15,24 +15,15 @@ In this project, we aim to help the HR department of a services company segment 
 
 # Creating the synthetic dataset dictionary
 data = 
-{'Emp Id': np.arange (1, num_employees + 1),
-'Sports': np.random.randint(1, 11, size=num_employees),
-'Religious': np.random.randint(1, 11, size=num_employees),
-'Nature': np.random.randint(1, 11, size=num_employees),
-'Theatre': np.random.randint(1, 11, size=num_employees),
-'Shopping': np.random.randint(1, 11, size=num_employees),
-'Picnic': np.random.randint(1, 11, size=num_employees)}
+{'Emp Id': np.arange (1, num_employees+1),
 
 # Converting the dictionary into a DataFrame
-df = pd.DataFrame(data)
-df.head()
 
-# %% [markdown]
+#
 # ## 2. Exploratory Data Analysis (EDA)
 # 
 # We start by checking the summary statistics and visualizing the distributions and relationships among the rating features.
 
-# %%
 # Displaying descriptive statistics of the dataset
 print("Descriptive Statistics:")
 print(df.describe())
@@ -147,8 +138,3 @@ print(cluster_summary)
 # - Analyzed the clusters to provide actionable recommendations for the HR department.
 # 
 # This analysis allows the company to offer tailored non-monetary incentives, ensuring employees receive rewards that truly match their interests.
-
-# %%
-# Optionally, save the final dataset with cluster labels to a CSV for reporting
-df.to_csv("employee_reward_clusters.csv", index=False)
-print("Final data with cluster labels has been saved as 'employee_reward_clusters.csv'.")
