@@ -1,44 +1,27 @@
 # Woolf_MLDM_Pranjal-Boruah
-# %% [markdown]
-# # HR Reward Preference Clustering Analysis
 # 
-# In this project, we aim to help the HR department of a services company segment its employees based on their reward preferences. Employees rated various leisure and entertainment activities such as Sports, Religious activities, Nature excursions, Theatre coupons, Shopping coupons, and Picnic outings. By applying clustering analysis, we can identify distinct groups, allowing HR to tailor non-monetary rewards to each segment.
+# HR Reward Preference Clustering Analysis
+# 
+In this project, we aim to help the HR department of a services company segment its employees based on their reward preferences. Employees rated various leisure and entertainment activities such as Sports, Religious activities, Nature excursions, Theatre coupons, Shopping coupons, and Picnic outings. By applying clustering analysis, we can identify distinct groups, allowing HR to tailor non-monetary rewards to each segment.
 
-# %%
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-from sklearn.cluster import KMeans
-from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
-
-# Ensuring inline plotting for Jupyter Notebook
-%matplotlib inline
-
-# %% [markdown]
-# ## 1. Data Generation & Overview
+#
+# 1. Data Generation & Overview
 # 
 # For this demonstration, we create a synthetic dataset with 50 employees. The ratings are on a scale of 1 to 10.
 
-# %%
 # Setting a seed for reproducibility
-np.random.seed(42)
 
 # Number of employees in our synthetic dataset
-num_employees = 50
 
 # Creating the synthetic dataset dictionary
-data = {
-    'Emp Id': np.arange(1, num_employees + 1),
-    'Sports': np.random.randint(1, 11, size=num_employees),
-    'Religious': np.random.randint(1, 11, size=num_employees),
-    'Nature': np.random.randint(1, 11, size=num_employees),
-    'Theatre': np.random.randint(1, 11, size=num_employees),
-    'Shopping': np.random.randint(1, 11, size=num_employees),
-    'Picnic': np.random.randint(1, 11, size=num_employees)
-}
+data = 
+{'Emp Id': np.arange (1, num_employees + 1),
+'Sports': np.random.randint(1, 11, size=num_employees),
+'Religious': np.random.randint(1, 11, size=num_employees),
+'Nature': np.random.randint(1, 11, size=num_employees),
+'Theatre': np.random.randint(1, 11, size=num_employees),
+'Shopping': np.random.randint(1, 11, size=num_employees),
+'Picnic': np.random.randint(1, 11, size=num_employees)}
 
 # Converting the dictionary into a DataFrame
 df = pd.DataFrame(data)
